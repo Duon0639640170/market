@@ -13,8 +13,8 @@ public class OrderEntity {
 	@Column(name = "order_id")
 	private Integer order_id;
 
-	@Column(name = "user_id")
-	private Integer user_id;
+	@Column(name = "id")
+	private Integer id;
 
 	@Column(name = "shop_id")
 	private Integer shop_id;
@@ -28,6 +28,9 @@ public class OrderEntity {
 	@Column(name = "order_date")
 	private String order_date;
 
+	@Column(name = "order_number")
+	private Integer order_number;
+
 	public Integer getOrder_id() {
 		return order_id;
 	}
@@ -36,12 +39,12 @@ public class OrderEntity {
 		this.order_id = order_id;
 	}
 
-	public Integer getUser_id() {
-		return user_id;
+	public Integer getId() {
+		return id;
 	}
 
-	public void setUser_id(Integer user_id) {
-		this.user_id = user_id;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	public Integer getShop_id() {
@@ -76,6 +79,15 @@ public class OrderEntity {
 		this.order_date = order_date;
 	}
 
+	public Integer getOrder_number() {
+		return order_number;
+	}
+
+	public void setOrder_number(Integer order_number) {
+		this.order_number = order_number;
+	}
+	
+	
 	
 	
 	

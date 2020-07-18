@@ -68,12 +68,13 @@ public class PaymentServiceImpl implements PaymentService {
 		PaymentDto dto = new PaymentDto();
 		if (entity != null) {
 			dto.setPm_id(entity.getPm_id());
-			dto.setUser_id(entity.getUser_id());
+			dto.setId(entity.getId());
 			dto.setPd_id(entity.getPd_id());
 			dto.setPm_totalpric(entity.getPm_totalpric());
 			dto.setPm_img(entity.getPm_img());
 			dto.setPm_date(entity.getPm_date());
 			dto.setPm_status(entity.getPm_status());
+			dto.setPm_parcel(entity.getPm_parcel());
 		
 		}
 		return dto;		
@@ -83,13 +84,13 @@ public class PaymentServiceImpl implements PaymentService {
 		PaymentEntity entity = new PaymentEntity();
 		if (dto != null) {
 			entity.setPm_id(dto.getPm_id());
-			entity.setUser_id(dto.getUser_id());
+			entity.setId(dto.getId());
 			entity.setPd_id(dto.getPd_id());
 			entity.setPm_totalpric(dto.getPm_totalpric());
 			entity.setPm_img(dto.getPm_img());
 			entity.setPm_date(dto.getPm_date());
 			entity.setPm_status(dto.getPm_status());
-					
+			entity.setPm_parcel(entity.getPm_parcel());		
 		}
 		return entity;		
 	}

@@ -3,22 +3,23 @@ package com.it.dto;
 public class OrderDto {
 
 	private int order_id;
-	private int user_id;
+	private int id;
 	private int shop_id;
 	private int pd_id;
 	private String order_name;
 	private String order_date;
+	private int order_number;
 	public int getOrder_id() {
 		return order_id;
 	}
 	public void setOrder_id(int order_id) {
 		this.order_id = order_id;
 	}
-	public int getUser_id() {
-		return user_id;
+	public int getId() {
+		return id;
 	}
-	public void setUser_id(int user_id) {
-		this.user_id = user_id;
+	public void setId(int id) {
+		this.id = id;
 	}
 	public int getShop_id() {
 		return shop_id;
@@ -44,6 +45,14 @@ public class OrderDto {
 	public void setOrder_date(String order_date) {
 		this.order_date = order_date;
 	}
+	public int getOrder_number() {
+		return order_number;
+	}
+	public void setOrder_number(int order_number) {
+		this.order_number = order_number;
+	}
+	
+	
 	
 	
 	

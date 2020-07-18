@@ -68,11 +68,12 @@ public class OrderServiceImpl implements OrderService{
 		OrderDto dto = new OrderDto();
 		if (entity != null) {
 			dto.setOrder_id(entity.getOrder_id());
-			dto.setUser_id(entity.getUser_id());
+			dto.setId(entity.getId());
 			dto.setShop_id(entity.getShop_id());
 			dto.setPd_id(entity.getPd_id());
 			dto.setOrder_name(entity.getOrder_name());
 			dto.setOrder_date(entity.getOrder_date());
+			dto.setOrder_number(entity.getOrder_number());
 		
 		}
 		return dto;		
@@ -82,11 +83,12 @@ public class OrderServiceImpl implements OrderService{
 		OrderEntity entity = new OrderEntity();
 		if (dto != null) {
 			entity.setOrder_id(dto.getOrder_id());
-			entity.setUser_id(dto.getUser_id());
+			entity.setId(dto.getId());
 			entity.setShop_id(dto.getShop_id());
 			entity.setPd_id(dto.getPd_id());
 			entity.setOrder_name(dto.getOrder_name());
 			entity.setOrder_date(dto.getOrder_date());
+			entity.setOrder_number(entity.getOrder_number());
 					
 		}
 		return entity;		

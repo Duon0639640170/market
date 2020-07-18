@@ -3,7 +3,7 @@ package com.it.dto;
 public class ShopDto {
 
 	private int shop_id;
-	private String user_id;
+	private String id;
 	private String shop_name;
 	private String shop_img;
 	private String shop_address;
@@ -14,11 +14,11 @@ public class ShopDto {
 	public void setShop_id(int shop_id) {
 		this.shop_id = shop_id;
 	}
-	public String getUser_id() {
-		return user_id;
+	public String getId() {
+		return id;
 	}
-	public void setUser_id(String user_id) {
-		this.user_id = user_id;
+	public void setId(String id) {
+		this.id = id;
 	}
 	public String getShop_name() {
 		return shop_name;
@@ -44,6 +44,8 @@ public class ShopDto {
 	public void setShop_tel(String shop_tel) {
 		this.shop_tel = shop_tel;
 	}
+	
+	
 	
 
 }

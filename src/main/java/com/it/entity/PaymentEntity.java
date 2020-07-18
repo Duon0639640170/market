@@ -16,8 +16,8 @@ public class PaymentEntity {
 	@Column(name = "pm_id")
 	private Integer pm_id;
 
-	@Column(name = "user_id")
-	private Integer user_id;
+	@Column(name = "id")
+	private Integer id;
 
 	@Column(name = "pd_id")
 	private Integer pd_id;
@@ -34,6 +34,9 @@ public class PaymentEntity {
 	@Column(name = "pm_status")
 	private String pm_status;
 
+	@Column(name = "pm_parcel")
+	private String pm_parcel;
+
 	public Integer getPm_id() {
 		return pm_id;
 	}
@@ -42,12 +45,12 @@ public class PaymentEntity {
 		this.pm_id = pm_id;
 	}
 
-	public Integer getUser_id() {
-		return user_id;
+	public Integer getId() {
+		return id;
 	}
 
-	public void setUser_id(Integer user_id) {
-		this.user_id = user_id;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	public Integer getPd_id() {
@@ -88,6 +91,14 @@ public class PaymentEntity {
 
 	public void setPm_status(String pm_status) {
 		this.pm_status = pm_status;
+	}
+
+	public String getPm_parcel() {
+		return pm_parcel;
+	}
+
+	public void setPm_parcel(String pm_parcel) {
+		this.pm_parcel = pm_parcel;
 	}
 
 
