@@ -1,0 +1,13 @@
+package com.it.dao;
+
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+import com.it.entity.PaymentEntity;
+
+
+
+@Repository
+public interface PaymentRepository extends CrudRepository<PaymentEntity, Integer>{
+
+}
