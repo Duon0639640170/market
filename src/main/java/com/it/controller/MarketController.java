@@ -25,7 +25,7 @@ public class MarketController {
 
 	@GetMapping("/ping")
 	public ResponseEntity<String> ping(){
-		return new ResponseEntity<String>("OK", HttpStatus.OK);
+		return new ResponseEntity<String>("OK", HttpStatus.OK) ;
 	}
 	
 	@PostMapping("/market/save")
