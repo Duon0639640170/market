@@ -25,6 +25,9 @@ public class OrderEntity {
 	@Column(name = "order_name")
 	private String order_name;
 	
+	@Column(name = "order_list")
+	private String order_list;
+	
 	@Column(name = "order_date")
 	private String order_date;
 
@@ -71,6 +74,14 @@ public class OrderEntity {
 		this.order_name = order_name;
 	}
 
+	public String getOrder_list() {
+		return order_list;
+	}
+
+	public void setOrder_list(String order_list) {
+		this.order_list = order_list;
+	}
+
 	public String getOrder_date() {
 		return order_date;
 	}
@@ -86,7 +97,7 @@ public class OrderEntity {
 	public void setOrder_number(Integer order_number) {
 		this.order_number = order_number;
 	}
-	
+
 	
 	
 	

@@ -69,7 +69,7 @@ public class ShopServiceImpl implements ShopService{
 		ShopDto dto = new ShopDto();
 		if (entity != null) {
 			dto.setShop_id(entity.getShop_id());
-			dto.setUser_id(entity.getUser_id());
+			dto.setId(entity.getId());
 			dto.setShop_name(entity.getShop_name());
 			dto.setShop_img(entity.getShop_img());
 			dto.setShop_address(entity.getShop_address());
@@ -83,7 +83,7 @@ public class ShopServiceImpl implements ShopService{
 		ShopEntity entity = new ShopEntity();
 		if (dto != null) {
 			entity.setShop_id(dto.getShop_id());
-			entity.setUser_id(dto.getUser_id());
+			entity.setId(dto.getId());
 			entity.setShop_name(dto.getShop_name());
 			entity.setShop_img(dto.getShop_img());
 			entity.setShop_address(dto.getShop_address());
