@@ -7,7 +7,6 @@ public class OrderDto {
 	private int shop_id;
 	private int pd_id;
 	private String order_name;
-	private String order_list;
 	private String order_date;
 	private int order_number;
 	public int getOrder_id() {
@@ -40,12 +39,6 @@ public class OrderDto {
 	public void setOrder_name(String order_name) {
 		this.order_name = order_name;
 	}
-	public String getOrder_list() {
-		return order_list;
-	}
-	public void setOrder_list(String order_list) {
-		this.order_list = order_list;
-	}
 	public String getOrder_date() {
 		return order_date;
 	}
@@ -58,10 +51,6 @@ public class OrderDto {
 	public void setOrder_number(int order_number) {
 		this.order_number = order_number;
 	}
-	
-	
-	
-	
 	
 	
 	

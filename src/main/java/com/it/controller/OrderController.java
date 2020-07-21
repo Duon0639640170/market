@@ -51,4 +51,13 @@ public class OrderController {
 		List<OrderDto> response = orderservice.selectAllOrder();
 		return new ResponseEntity<List<OrderDto>>(response, HttpStatus.OK);
 	}
+		@PostMapping("/order/saveAll")
+		public ResponseEntity<ArrayList<OrderDto>> saveOrderAll(@RequestBody ArrayList<OrderDto> orders) throws Exception{		
+			if (orders != null) {
+				for (OrderDto orderDto : orders) {
+					orderservice.saveOrder(orderDto);
+				}
+			}
+			return new ResponseEntity<ArrayList<OrderDto>>(orders, HttpStatus.OK);
+		}
 }
