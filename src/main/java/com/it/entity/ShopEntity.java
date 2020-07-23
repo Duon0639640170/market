@@ -14,7 +14,7 @@ public class ShopEntity {
 	private Integer shop_id;
 
 	@Column(name = "id")
-	private String id;
+	private Integer id;
 
 	@Column(name = "shop_name")
 	private String shop_name;
@@ -27,6 +27,12 @@ public class ShopEntity {
 
 	@Column(name = "shop_tel")
 	private String shop_tel;
+	
+	@Column(name = "bank_account_no")
+	private String bank_account_no;
+	
+	@Column(name = "bank_name")
+	private String bank_name;
 
 	public Integer getShop_id() {
 		return shop_id;
@@ -36,11 +42,11 @@ public class ShopEntity {
 		this.shop_id = shop_id;
 	}
 
-	public String getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -76,6 +82,23 @@ public class ShopEntity {
 		this.shop_tel = shop_tel;
 	}
 
+	public String getBank_account_no() {
+		return bank_account_no;
+	}
+
+	public void setBank_account_no(String bank_account_no) {
+		this.bank_account_no = bank_account_no;
+	}
+
+	public String getBank_name() {
+		return bank_name;
+	}
+
+	public void setBank_name(String bank_name) {
+		this.bank_name = bank_name;
+	}
+
+	
 	
 
 

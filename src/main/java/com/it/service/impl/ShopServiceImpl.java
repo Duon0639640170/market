@@ -74,7 +74,8 @@ public class ShopServiceImpl implements ShopService{
 			dto.setShop_img(entity.getShop_img());
 			dto.setShop_address(entity.getShop_address());
 			dto.setShop_tel(entity.getShop_tel());
-			
+			dto.setBank_account_no(entity.getBank_account_no());
+			dto.setBank_name(entity.getBank_name());
 		}
 		return dto;		
 	}
@@ -88,7 +89,8 @@ public class ShopServiceImpl implements ShopService{
 			entity.setShop_img(dto.getShop_img());
 			entity.setShop_address(dto.getShop_address());
 			entity.setShop_tel(dto.getShop_tel());
-			
+			entity.setBank_account_no(dto.getBank_account_no());
+			entity.setBank_name(dto.getBank_name());
 		}
 		return entity;		
 	}
