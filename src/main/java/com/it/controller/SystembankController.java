@@ -13,7 +13,7 @@ import com.it.entity.SystembankEntity;
 import com.it.service.SystembankService;
 
 @RestController
-public class systembankController {
+public class SystembankController {
 
 	
 @Autowired(required=false)
