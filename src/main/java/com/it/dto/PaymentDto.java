@@ -57,7 +57,7 @@ public class PaymentDto {
 	public String getTracking_no() {
 		return tracking_no;
 	}
-	public void setTracking_no(String tracking_no) {
+	public void setTracking_no(String tracking_no ) {
 		this.tracking_no = tracking_no;
 	}
 	
