@@ -50,7 +50,7 @@ public class ProductDto {
 	public int getPd_number() {
 		return pd_number;
 	}
-	public void setPd_number(int pd_number) {
+	public void setPd_number(int pd_number ) {
 		this.pd_number = pd_number;
 	}
 	
