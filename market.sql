@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 23, 2020 at 08:20 AM
+-- Generation Time: Jul 24, 2020 at 08:22 AM
 -- Server version: 5.7.17-log
 -- PHP Version: 5.6.30
 
@@ -111,14 +111,14 @@ CREATE TABLE `tb_payment` (
   `pm_img` varchar(50) NOT NULL,
   `pm_date` varchar(100) NOT NULL,
   `pm_status` varchar(3) NOT NULL,
-  `pm_parcel` varchar(15) NOT NULL
+  `tracking_no` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tb_payment`
 --
 
-INSERT INTO `tb_payment` (`pm_id`, `id`, `pd_id`, `pm_totalpric`, `pm_img`, `pm_date`, `pm_status`, `pm_parcel`) VALUES
+INSERT INTO `tb_payment` (`pm_id`, `id`, `pd_id`, `pm_totalpric`, `pm_img`, `pm_date`, `pm_status`, `tracking_no`) VALUES
 (1, 1, 1, '0.0000', 'l', 'l', 'l', '0'),
 (2, 2, 111, '1.0000', 'ffs', 'hh', 'gg', '0'),
 (3, 2, 111, '1.0000', 'ffs', 'hh', 'gg', '0');
@@ -135,15 +135,16 @@ CREATE TABLE `tb_product` (
   `pd_name` varchar(50) NOT NULL,
   `pd_img` varchar(50) NOT NULL,
   `pd_price` decimal(10,4) DEFAULT NULL,
-  `pd_details` varchar(50) NOT NULL
+  `pd_details` varchar(50) NOT NULL,
+  `pd_number` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tb_product`
 --
 
-INSERT INTO `tb_product` (`pd_id`, `shop_id`, `pd_name`, `pd_img`, `pd_price`, `pd_details`) VALUES
-(1, 1, 'k', 'k', '0.0000', 'k');
+INSERT INTO `tb_product` (`pd_id`, `shop_id`, `pd_name`, `pd_img`, `pd_price`, `pd_details`, `pd_number`) VALUES
+(1, 1, 'k', 'k', '0.0000', 'k', 0);
 
 -- --------------------------------------------------------
 
