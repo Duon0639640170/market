@@ -10,6 +10,7 @@ public class ProductDto {
 	private String pd_img;
 	private BigDecimal pd_price;
 	private String pd_details;
+	private  int pd_number;
 	public int getPd_id() {
 		return pd_id;
 	}
@@ -45,6 +46,12 @@ public class ProductDto {
 	}
 	public void setPd_details(String pd_details) {
 		this.pd_details = pd_details;
+	}
+	public int getPd_number() {
+		return pd_number;
+	}
+	public void setPd_number(int pd_number) {
+		this.pd_number = pd_number;
 	}
 	
 	

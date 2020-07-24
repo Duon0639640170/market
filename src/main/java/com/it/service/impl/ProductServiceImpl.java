@@ -74,6 +74,7 @@ public class ProductServiceImpl implements ProductService {
 			dto.setPd_img(entity.getPd_img());
 			dto.setPd_price(entity.getPd_price());
 			dto.setPd_details(entity.getPd_details());
+			dto.setPd_number(entity.getPd_number());
 					
 		}
 		return dto;		
@@ -88,7 +89,7 @@ public class ProductServiceImpl implements ProductService {
 			entity.setPd_img(dto.getPd_img());
 			entity.setPd_price(dto.getPd_price());
 			entity.setPd_details(dto.getPd_details());
-					
+			entity.setPd_number(dto.getPd_number());		
 		}
 		return entity;		
 	}

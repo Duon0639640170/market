@@ -74,7 +74,7 @@ public class PaymentServiceImpl implements PaymentService {
 			dto.setPm_img(entity.getPm_img());
 			dto.setPm_date(entity.getPm_date());
 			dto.setPm_status(entity.getPm_status());
-			dto.setPm_parcel(entity.getPm_parcel());
+			dto.setTracking_no(entity.getTracking_no());
 		
 		}
 		return dto;		
@@ -90,7 +90,7 @@ public class PaymentServiceImpl implements PaymentService {
 			entity.setPm_img(dto.getPm_img());
 			entity.setPm_date(dto.getPm_date());
 			entity.setPm_status(dto.getPm_status());
-			entity.setPm_parcel(entity.getPm_parcel());		
+			entity.setTracking_no(entity.getTracking_no());		
 		}
 		return entity;		
 	}

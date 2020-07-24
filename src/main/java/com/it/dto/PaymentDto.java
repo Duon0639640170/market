@@ -11,8 +11,7 @@ public class PaymentDto {
 	private String pm_img;
 	private String pm_date;
 	private String pm_status;
-	private String pm_parcel;
-	
+	private String tracking_no;
 	public int getPm_id() {
 		return pm_id;
 	}
@@ -55,14 +54,13 @@ public class PaymentDto {
 	public void setPm_status(String pm_status) {
 		this.pm_status = pm_status;
 	}
-	public String getPm_parcel() {
-		return pm_parcel;
+	public String getTracking_no() {
+		return tracking_no;
 	}
-	public void setPm_parcel(String pm_parcel) {
-		this.pm_parcel = pm_parcel;
+	public void setTracking_no(String tracking_no) {
+		this.tracking_no = tracking_no;
 	}
-
-
+	
 	
 	
 }
