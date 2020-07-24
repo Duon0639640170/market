@@ -8,6 +8,6 @@ import com.it.entity.PaymentEntity;
 
 
 @Repository
-public interface PaymentRepository extends CrudRepository<PaymentEntity, Integer>{
+public interface PaymentRepository extends CrudRepository<PaymentEntity, Integer >{
 
 }
