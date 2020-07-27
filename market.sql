@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 27, 2020 at 01:48 PM
+-- Generation Time: Jul 27, 2020 at 05:49 PM
 -- Server version: 5.7.17-log
 -- PHP Version: 5.6.30
 
@@ -204,15 +204,16 @@ INSERT INTO `tb_shop` (`shop_id`, `id`, `shop_name`, `shop_img`, `shop_address`,
 CREATE TABLE `tb_systembank` (
   `id` int(5) NOT NULL,
   `bank_account` varchar(10) NOT NULL,
-  `bank_name` varchar(100) NOT NULL
+  `bank_name` varchar(100) NOT NULL,
+  `account_name` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tb_systembank`
 --
 
-INSERT INTO `tb_systembank` (`id`, `bank_account`, `bank_name`) VALUES
-(1, '1234567890', 'joy');
+INSERT INTO `tb_systembank` (`id`, `bank_account`, `bank_name`, `account_name`) VALUES
+(1, '1234567890', 'joy', '');
 
 --
 -- Indexes for dumped tables
