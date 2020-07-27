@@ -88,7 +88,7 @@ public class OrderServiceImpl implements OrderService{
 			entity.setPd_id(dto.getPd_id());
 			entity.setOrder_name(dto.getOrder_name());
 			entity.setOrder_date(dto.getOrder_date());
-			entity.setOrder_number(entity.getOrder_number());
+			entity.setOrder_number(dto.getOrder_number());
 					
 		}
 		return entity;		
