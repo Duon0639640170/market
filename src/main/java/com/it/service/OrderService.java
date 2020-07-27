@@ -1,5 +1,6 @@
 package com.it.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.it.dto.OrderDto;
@@ -17,4 +18,6 @@ public interface OrderService {
 	public List<OrderDto> selectAllOrder() throws Exception;
 	
 	public OrderDto getOrderByOrder_id (Integer order_id) throws Exception;
+	
+	public ArrayList<OrderDto> getOrdersById (Integer id) throws Exception;
 }

@@ -60,4 +60,10 @@ public class OrderController {
 			}
 			return new ResponseEntity<ArrayList<OrderDto>>(orders, HttpStatus.OK);
 		}
+		
+		@GetMapping("/orders/{id}")
+		public ResponseEntity<ArrayList<OrderDto>> getOrderById(@PathVariable Integer id) throws Exception {
+			ArrayList<OrderDto> orders = orderservice.getOrdersById(id);
+			return new ResponseEntity<ArrayList<OrderDto>>(orders, HttpStatus.OK);
+		}
 }

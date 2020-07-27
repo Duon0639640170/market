@@ -108,5 +108,20 @@ public class OrderServiceImpl implements OrderService{
 		}
 		return order;
 	}
+	
+	@Override
+	public ArrayList<OrderDto> getOrdersById(Integer id) throws Exception {
+		ArrayList<OrderDto> orders = new ArrayList<>();
+		if(id > 0) {
+			ArrayList<OrderEntity> entities = orderRepository.findAllById(id);
+			if (entities != null) {
+				for (OrderEntity entity : entities) {
+					orders.add(convertEntityToDto(entity));
+				}
+			}
+			
+		}
+		return orders;
+	}
 
 }
