@@ -18,6 +18,9 @@ public class SystembankEntity {
 
 	@Column(name = "bank_name")
 	private String bank_name;
+	
+	@Column(name = "account_name")
+	private String account_name;
 
 	public Integer getId() {
 		return id;
@@ -41,6 +44,14 @@ public class SystembankEntity {
 
 	public void setBank_name(String bank_name) {
 		this.bank_name = bank_name;
+	}
+
+	public String getAccount_name() {
+		return account_name;
+	}
+
+	public void setAccount_name(String account_name) {
+		this.account_name = account_name;
 	}
 	
 	

@@ -37,7 +37,7 @@ public class SystembankServiceImpl implements SystembankService{
 			dto.setId(entity.getId());
 			dto.setBank_account(entity.getBank_account());
 			dto.setBank_name(entity.getBank_name());
-			
+			dto.setAccount_name(entity.getAccount_name());
 		}
 		return dto;		
 	}
@@ -48,7 +48,7 @@ public class SystembankServiceImpl implements SystembankService{
 			entity.setId(dto.getId());
 			entity.setBank_account(dto.getBank_account());
 			entity.setBank_name(dto.getBank_name());
-			
+			entity.setAccount_name(dto.getAccount_name());
 					
 		}
 		return entity;		
