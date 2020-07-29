@@ -25,7 +25,7 @@ public class ProductController {
 	
 	
 	@PostMapping("/product/save")
-	public ResponseEntity<ProductDto> saveStudent(@RequestBody ProductDto productDto) throws Exception{		
+	public ResponseEntity<ProductDto> saveProduct(@RequestBody ProductDto productDto) throws Exception{		
 		productService.saveProduct(productDto);
 		return new ResponseEntity<ProductDto>(productDto, HttpStatus.OK);
 	}
