@@ -6,7 +6,6 @@ public class PaymentDto {
 
 	private int pm_id;
 	private int id;
-	private int pd_id;
 	private BigDecimal pm_totalpric;
 	private String pm_img;
 	private String pm_date;

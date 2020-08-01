@@ -19,9 +19,6 @@ public class PaymentEntity {
 	@Column(name = "id")
 	private Integer id;
 
-	@Column(name = "pd_id")
-	private Integer pd_id;
-
 	@Column(name = "pm_totalpric")
 	private BigDecimal pm_totalpric;
 
@@ -51,14 +48,6 @@ public class PaymentEntity {
 
 	public void setId(Integer id) {
 		this.id = id;
-	}
-
-	public Integer getPd_id() {
-		return pd_id;
-	}
-
-	public void setPd_id(Integer pd_id) {
-		this.pd_id = pd_id;
 	}
 
 	public BigDecimal getPm_totalpric() {
