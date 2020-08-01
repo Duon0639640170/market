@@ -23,12 +23,6 @@ public class PaymentDto {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public int getPd_id() {
-		return pd_id;
-	}
-	public void setPd_id(int pd_id) {
-		this.pd_id = pd_id;
-	}
 	public BigDecimal getPm_totalpric() {
 		return pm_totalpric;
 	}
