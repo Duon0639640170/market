@@ -46,7 +46,7 @@ public class PaymentServiceImpl implements PaymentService {
 		if(pm_id > 0 ) {
 			paymentRepository.deleteById(pm_id);
 		}else {
-			throw new NullPointerException("deletePaymentByPD_id :: pm_id <0");
+			throw new NullPointerException("deletePaymentByPM_id :: pm_id <0");
 		
 		}
 		return pm_id;
@@ -74,6 +74,7 @@ public class PaymentServiceImpl implements PaymentService {
 			dto.setPm_date(entity.getPm_date());
 			dto.setPm_status(entity.getPm_status());
 			dto.setTracking_no(entity.getTracking_no());
+			dto.setPm_no(entity.getPm_no());
 		
 		}
 		return dto;		
@@ -88,7 +89,8 @@ public class PaymentServiceImpl implements PaymentService {
 			entity.setPm_img(dto.getPm_img());
 			entity.setPm_date(dto.getPm_date());
 			entity.setPm_status(dto.getPm_status());
-			entity.setTracking_no(entity.getTracking_no());		
+			entity.setTracking_no(dto.getTracking_no());		
+			entity.setPm_no(dto.getPm_no());	
 		}
 		return entity;		
 	}

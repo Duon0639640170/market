@@ -33,6 +33,9 @@ public class PaymentEntity {
 
 	@Column(name = "tracking_no")
 	private String tracking_no;
+	
+	@Column(name = "pm_no")
+	private String pm_no;
 
 	public Integer getPm_id() {
 		return pm_id;
@@ -88,6 +91,14 @@ public class PaymentEntity {
 
 	public void setTracking_no(String tracking_no) {
 		this.tracking_no = tracking_no;
+	}
+
+	public String getPm_no() {
+		return pm_no;
+	}
+
+	public void setPm_no(String pm_no) {
+		this.pm_no = pm_no;
 	}
 
 
