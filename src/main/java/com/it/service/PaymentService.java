@@ -15,6 +15,8 @@ public interface PaymentService {
 
 	public List<PaymentDto> selectAllPayment() throws Exception;
 	
+	public List<PaymentDto> selectPaymentListById(int id) throws Exception;
+	
 	public PaymentDto getPaymentByPM_id (Integer pm_id) throws Exception;
 	
 }

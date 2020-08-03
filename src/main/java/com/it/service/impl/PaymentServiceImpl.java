@@ -110,4 +110,16 @@ public class PaymentServiceImpl implements PaymentService {
 		return payment;
 	}
 
+	@Override
+	public List<PaymentDto> selectPaymentListById(int id) throws Exception {
+		List<PaymentDto> payments = new ArrayList<>();
+		List<PaymentEntity> entities = paymentRepository.findPaymentById(id);
+		if (entities != null) {
+			payments = entities.stream()
+					.map(entity -> convertEntityToDto(entity))
+					.collect(Collectors.toList());
+		}
+		return payments;
+	}
+
 }
