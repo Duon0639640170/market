@@ -99,6 +99,7 @@ public class PaymentEntity {
 
 	public void setPm_no(String pm_no) {
 		this.pm_no = pm_no;
+		
 	}
 
 
