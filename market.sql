@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 27, 2020 at 05:49 PM
+-- Generation Time: Aug 02, 2020 at 08:40 AM
 -- Server version: 5.7.17-log
 -- PHP Version: 5.6.30
 
@@ -71,7 +71,9 @@ INSERT INTO `oauth_user` (`id`, `first_name`, `last_name`, `username`, `password
 (27, 'นายสมร', 'สกุลสัง', 'smon', '$2a$10$BPEUT/JX2v/VvNDakNj5qOZh0AoqH.dq3kxx9gP5PTdCmsfVPgery', '0', '', '', 2, 'active', NULL),
 (28, 'ดวงพร', 'ดี', 'joy', '$2a$10$vdP48j/3/BOb.z1usXS.XuUy8HI9jpDUWkqNdLvQuqH9EZaW6lIx.', '0', '', '', 2, 'active', NULL),
 (29, 'joyy', 'dj', 'kkk', '$2a$10$GugL/KdFL0g4PMM88YbQy.e9HZ4qIdKgoZ6hx7xRBL2tpjQdgRzZm', 'dddde', '123456789', 'f', 3, 'active', NULL),
-(30, 'joyy', 'dj', 'ttt', '$2a$10$Frq7pKtGaNSFXXfELphRqeIhxoKh7fnSjCCjRgyLrXd7HZv3YFa82', 'dddde', '123456789', 'f', 2, 'active', NULL);
+(30, 'joyy', 'dj', 'ttt', '$2a$10$Frq7pKtGaNSFXXfELphRqeIhxoKh7fnSjCCjRgyLrXd7HZv3YFa82', 'dddde', '123456789', 'f', 2, 'active', NULL),
+(31, 'fon', 'fff', 'fon', '$2a$10$1pxs5X/HvdbdQUT6Q4fRSOOQ9GKNm824P1DDPxbbbp5yN39ul7rem', 'dddddd', '0896412357', 'm', NULL, 'active', NULL),
+(32, 'ddddddd', 'dddddd', 'dddddddd', '$2a$10$QHbKWpDFPdEgMdzvpEz1PO17TsWGUY5B.IAG8vAyKIJxd78rUv5Le', 'dddd', '0123456789', 'F', NULL, 'active', NULL);
 
 -- --------------------------------------------------------
 
@@ -95,7 +97,14 @@ CREATE TABLE `tb_order` (
 
 INSERT INTO `tb_order` (`order_id`, `id`, `shop_id`, `pd_id`, `order_name`, `order_date`, `order_number`) VALUES
 (1, 1, 1, 1, 'uj', 'y', 0),
-(2, 1, 1, 1, 'hhhhhh', 'hh', 0);
+(2, 1, 1, 1, 'hhhhhh', 'hh', 0),
+(3, 0, 0, 0, 'fff', '13', 0),
+(4, 0, 0, 555, '2222', '111', 444),
+(5, 0, 0, 555, '2222', '111', 444),
+(6, 0, 0, 555, '2222', '111', 444),
+(7, 0, 0, 555, '2222', '111', 444),
+(8, 0, 0, 555, '2222', '111', 444),
+(9, 0, 0, 555, '2222', '111', 444);
 
 -- --------------------------------------------------------
 
@@ -107,10 +116,10 @@ CREATE TABLE `tb_payment` (
   `pm_id` int(5) NOT NULL,
   `id` int(5) NOT NULL,
   `pm_totalpric` decimal(10,4) NOT NULL,
-  `pm_img` varchar(50) NOT NULL,
-  `pm_date` varchar(100) NOT NULL,
-  `pm_status` varchar(3) NOT NULL,
-  `tracking_no` varchar(15) NOT NULL
+  `pm_img` varchar(50) DEFAULT NULL,
+  `pm_date` varchar(100) DEFAULT NULL,
+  `pm_status` varchar(3) DEFAULT NULL,
+  `tracking_no` varchar(15) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -119,8 +128,9 @@ CREATE TABLE `tb_payment` (
 
 INSERT INTO `tb_payment` (`pm_id`, `id`, `pm_totalpric`, `pm_img`, `pm_date`, `pm_status`, `tracking_no`) VALUES
 (1, 1, '0.0000', 'l', 'l', 'l', '0'),
-(2, 2, '1.0000', 'ffs', 'hh', 'gg', '0'),
-(3, 2, '1.0000', 'ffs', 'hh', 'gg', '0');
+(2, 2, '12.0000', 'iii', 'hhh', 'iii', NULL),
+(3, 2, '1.0000', 'ffs', 'hh', 'gg', '0'),
+(4, 5, '100.0000', 'h', 'hhh', 'k', NULL);
 
 -- --------------------------------------------------------
 
@@ -143,7 +153,10 @@ CREATE TABLE `tb_product` (
 --
 
 INSERT INTO `tb_product` (`pd_id`, `shop_id`, `pd_name`, `pd_img`, `pd_price`, `pd_details`, `pd_number`) VALUES
-(1, 1, 'k', 'k', '0.0000', 'k', 0);
+(1, 1, 'kttttt', 'ff.jpg', '100.0000', 'ktttt', 1000),
+(3, 1, 'string', 'ff.jpg', '0.0000', 'string', 0),
+(4, 1, 'โดนัด gggg', 'ff.jpg', '1200.0000', 'หอม อร่อย นุ่ม Ojjjjj', 20),
+(8, 2, 'sssss', 'ff.jpg', '222.0000', 'gggg', 0);
 
 -- --------------------------------------------------------
 
@@ -192,8 +205,13 @@ CREATE TABLE `tb_shop` (
 --
 
 INSERT INTO `tb_shop` (`shop_id`, `id`, `shop_name`, `shop_img`, `shop_address`, `shop_tel`, `bank_account_no`, `bank_name`) VALUES
-(1, 1, '111', 'sdkd', 'ffkffs', '111', '0', ''),
-(2, 1, '111', 'sdkd', 'ffkffs', '111', '0', '');
+(1, 1, 'ร้านขายส้ม', 'sdkd', 'ffkffs', '111', '0', ''),
+(2, 1, 'ร้านขายไก่', 'sdkd', 'ffkffs', '111', '0', ''),
+(3, 0, 'ร้านขายหมู', 'string', 'string', 'string', 'string', 'string'),
+(4, 0, 'ป้าปุ้ย', '9.jpg', 'สารคาม', '191', '1234567890', 'kb'),
+(5, 0, 'ป้าปุ้ย', '9.jpg', 'สารคาม', '191', '1234567890', 'kb'),
+(14, 0, 'dd', 'hh', 'ddd', '11', '444', 'hh'),
+(15, 0, 'กอไก่', 'ff.jpg', 'ขอนแก่น', '1112', '1111', 'กกกก');
 
 -- --------------------------------------------------------
 
@@ -288,22 +306,22 @@ ALTER TABLE `oauth_role`
 -- AUTO_INCREMENT for table `oauth_user`
 --
 ALTER TABLE `oauth_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 --
 -- AUTO_INCREMENT for table `tb_order`
 --
 ALTER TABLE `tb_order`
-  MODIFY `order_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `order_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `tb_payment`
 --
 ALTER TABLE `tb_payment`
-  MODIFY `pm_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `pm_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `tb_product`
 --
 ALTER TABLE `tb_product`
-  MODIFY `pd_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `pd_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `tb_report`
 --
@@ -313,7 +331,7 @@ ALTER TABLE `tb_report`
 -- AUTO_INCREMENT for table `tb_shop`
 --
 ALTER TABLE `tb_shop`
-  MODIFY `shop_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `shop_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT for table `tb_systembank`
 --
