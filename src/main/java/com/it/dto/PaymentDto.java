@@ -6,7 +6,6 @@ public class PaymentDto {
 
 	private int pm_id;
 	private int id;
-	private int shop_id;
 	private BigDecimal pm_totalpric;
 	private String pm_img;
 	private String pm_date;
@@ -25,13 +24,6 @@ public class PaymentDto {
 	}
 	public void setId(int id) {
 		this.id = id;
-	}
-	
-	public int getShop_id() {
-		return shop_id;
-	}
-	public void setShop_id(int shop_id) {
-		this.shop_id = shop_id;
 	}
 	public BigDecimal getPm_totalpric() {
 		return pm_totalpric;

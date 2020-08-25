@@ -15,4 +15,7 @@ public interface ShopService {
 	
 	public ShopDto getShopByShop_id (Integer shop_id) throws Exception;
 	
+	public ShopDto getShopByUserId (Integer id) throws Exception;
+	
+
 }

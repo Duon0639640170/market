@@ -69,7 +69,6 @@ public class PaymentServiceImpl implements PaymentService {
 		if (entity != null) {
 			dto.setPm_id(entity.getPm_id());
 			dto.setId(entity.getId());
-			dto.setShop_id(entity.getShop_id());
 			dto.setPm_totalpric(entity.getPm_totalpric());
 			dto.setPm_img(entity.getPm_img());
 			dto.setPm_date(entity.getPm_date());
@@ -86,7 +85,6 @@ public class PaymentServiceImpl implements PaymentService {
 		if (dto != null) {
 			entity.setPm_id(dto.getPm_id());
 			entity.setId(dto.getId());
-			entity.setShop_id(dto.getShop_id());
 			entity.setPm_totalpric(dto.getPm_totalpric());
 			entity.setPm_img(dto.getPm_img());
 			entity.setPm_date(dto.getPm_date());

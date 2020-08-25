@@ -20,4 +20,8 @@ public interface OrderService {
 	public OrderDto getOrderByOrder_id (Integer order_id) throws Exception;
 	
 	public ArrayList<OrderDto> getOrdersById (Integer id) throws Exception;
+	
+	public ArrayList<OrderDto> getOrdersByShop_id (Integer shop_id) throws Exception;
+
+	
 }

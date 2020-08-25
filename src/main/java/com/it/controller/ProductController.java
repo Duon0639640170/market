@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.it.dto.ProductDto;
+import com.it.dto.ShopDto;
 import com.it.service.ProductService;
 
 @RestController
@@ -48,6 +49,17 @@ public class ProductController {
 		return new ResponseEntity<ProductDto>(productDto, HttpStatus.OK);		
 	}
 	
+	
+	@GetMapping("/product-by-shop_id/{shop_id}")
+	public ResponseEntity<List<ProductDto>> getProductByShop_id(@PathVariable Integer shop_id) throws Exception {
+		List<ProductDto> shop = productService.getProductByShop_id(shop_id);
+		return new ResponseEntity<List<ProductDto>>(shop, HttpStatus.OK);
+	}
+//	@GetMapping("/product-by-shop_id/{shop_id}")
+//	public ResponseEntity<ProductDto> getProductByShop_id(@PathVariable Integer shop_id) throws Exception {
+//		ProductDto productDto = productService.getProductByShop_id(shop_id);
+//		return new ResponseEntity<ProductDto>(productDto, HttpStatus.OK);
+//	}
 	
 	@GetMapping("/product")
 	public ResponseEntity<List<ProductDto>> getAllProduct() throws Exception{

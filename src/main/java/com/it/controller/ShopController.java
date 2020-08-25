@@ -17,44 +17,46 @@ import com.it.service.ShopService;;
 
 @RestController
 public class ShopController {
-	
 
-	
-	@Autowired(required=false)
-	
+	@Autowired(required = false)
+
 	ShopService shopservice;
 
-	
-	
 	@PostMapping("/shop/save")
-	public ResponseEntity<ShopDto> saveShop(@RequestBody ShopDto shopDto) throws Exception{		
+	public ResponseEntity<ShopDto> saveShop(@RequestBody ShopDto shopDto) throws Exception {
 		shopservice.saveShop(shopDto);
 		return new ResponseEntity<ShopDto>(shopDto, HttpStatus.OK);
 	}
-	
+
 	@PostMapping("/shop/update")
-	public ResponseEntity<ShopDto> updateMarket(@RequestBody ShopDto shopDto) throws Exception{
+	public ResponseEntity<ShopDto> updateShop(@RequestBody ShopDto shopDto) throws Exception {
 		shopservice.updateShop(shopDto);
 		return new ResponseEntity<ShopDto>(shopDto, HttpStatus.OK);
 	}
-	
+
 	@DeleteMapping("/shop/{shop_id}")
-	public ResponseEntity<Integer> deleteShopByShop_id(@PathVariable Integer shop_id) throws Exception{
+	public ResponseEntity<Integer> deleteShopByShop_id(@PathVariable Integer shop_id) throws Exception {
 		shopservice.deleteShopByShop_id(shop_id);
-		return new ResponseEntity<Integer>(shop_id, HttpStatus.OK);		
+		return new ResponseEntity<Integer>(shop_id, HttpStatus.OK);
 	}
-		@GetMapping("/shop/{shop_id}")
-	public ResponseEntity<ShopDto> getShopByShop (@PathVariable Integer shop_id) throws Exception{
-			ShopDto shopDto = shopservice.getShopByShop_id(shop_id);
-		return new ResponseEntity<ShopDto>(shopDto, HttpStatus.OK);		
+
+	@GetMapping("/shop/{shop_id}")
+	public ResponseEntity<ShopDto> getShopByShop_id(@PathVariable Integer shop_id) throws Exception {
+		ShopDto shopDto = shopservice.getShopByShop_id(shop_id);
+		return new ResponseEntity<ShopDto>(shopDto, HttpStatus.OK);
 	}
 	
+	@GetMapping("/shop-by-id/{id}")
+	public ResponseEntity<ShopDto> getShopByUserId(@PathVariable Integer id) throws Exception {
+		ShopDto shopDto = shopservice.getShopByUserId(id);
+		return new ResponseEntity<ShopDto>(shopDto, HttpStatus.OK);
+	}
+
 	
 	@GetMapping("/shop")
-	public ResponseEntity<List<ShopDto>> getAllShop() throws Exception{
+	public ResponseEntity<List<ShopDto>> getAllShop() throws Exception {
 		List<ShopDto> response = shopservice.selectAllShop();
 		return new ResponseEntity<List<ShopDto>>(response, HttpStatus.OK);
 	}
-	
-	
+
 }

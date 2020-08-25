@@ -2,6 +2,7 @@ package com.it.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -97,15 +98,32 @@ public class ShopServiceImpl implements ShopService{
 
 	@Override
 	public ShopDto getShopByShop_id(Integer shop_id) throws Exception {
+		System.out.println("shop_id => " + shop_id);
 		ShopDto shop = new ShopDto();
 		if (shop_id> 0 ) {
-			ShopEntity entity = shopRepository.findById(shop_id).get();
+			Optional<ShopEntity> entity = shopRepository.findById(shop_id);
+			if (entity != null) {
+				shop = convertEntityToDto(entity.get());
+				
+			}
+		} else {
+			throw new NullPointerException("getShopByShop_id :: shop_id < 0! ");
+		}
+		return shop;
+	}
+
+	@Override
+	public ShopDto getShopByUserId(Integer id) throws Exception {
+		System.out.println("getShopByUserId :: id => " + id);
+		ShopDto shop = new ShopDto();
+		if (id != null ) {
+			ShopEntity entity = shopRepository.findShopByUserId(id);
 			if (entity != null) {
 				shop = convertEntityToDto(entity);
 				
 			}
 		} else {
-			throw new NullPointerException("getShopByShop_id :: shop_id < 0! ");
+			throw new NullPointerException("getShopByUserId :: id is null! ");
 		}
 		return shop;
 	}

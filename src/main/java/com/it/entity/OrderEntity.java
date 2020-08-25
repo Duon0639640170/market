@@ -20,7 +20,7 @@ public class OrderEntity {
 	private Integer id;
 
 	@Column(name = "shop_id")
-	private Integer shop_id;
+	private Integer shopId;
 
 	@Column(name = "pd_id")
 	private Integer pd_id;
@@ -51,11 +51,11 @@ public class OrderEntity {
 	}
 
 	public Integer getShop_id() {
-		return shop_id;
+		return shopId;
 	}
 
 	public void setShop_id(Integer shop_id) {
-		this.shop_id = shop_id;
+		this.shopId = shop_id;
 	}
 
 	public Integer getPd_id() {

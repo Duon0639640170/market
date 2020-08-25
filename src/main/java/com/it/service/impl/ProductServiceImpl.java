@@ -9,7 +9,9 @@ import org.springframework.stereotype.Service;
 
 import com.it.dao.ProductRepository;
 import com.it.dto.ProductDto;
+import com.it.dto.ShopDto;
 import com.it.entity.ProductEntity;
+import com.it.entity.ShopEntity;
 import com.it.service.ProductService;
 
 @Service
@@ -105,6 +107,22 @@ public class ProductServiceImpl implements ProductService {
 			}
 		} else {
 			throw new NullPointerException("getProductByPD_id :: pd_id < 0! ");
+		}
+		return product;
+	}
+	
+	@Override
+	public List<ProductDto> getProductByShop_id(Integer shop_id) throws Exception {
+		System.out.println("getProductByShop_id :: shop_id => " + shop_id);
+		List<ProductDto> product = new ArrayList<>();
+		if (shop_id != null ) {
+			List<ProductEntity> entities = productRepository.findProductByShopId(shop_id);
+			if (entities != null) {
+				product = entities.stream().map(entity -> convertEntityToDto(entity)).collect(Collectors.toList());
+				
+			}
+		} else {
+			throw new NullPointerException("getProductByShop_id :: shop_id is null! ");
 		}
 		return product;
 	}

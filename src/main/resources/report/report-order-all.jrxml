@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final using JasperReports Library version 6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report-order-all" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bc9341b1-3e3d-4574-a717-d3df134189f8">
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="shop_id" class="java.lang.Integer"/>
+	<field name="pd_id" class="java.lang.Integer"/>
+	<field name="order_date" class="java.lang.String"/>
+	<field name="order_number" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="40" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="560" height="40" uuid="6c23f908-2661-43d1-900d-4dc1b8e502c2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="THSarabun" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[รายงานสรุปยอดรายการสั่งซื้อทั้งหมด]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="27" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="20" y="0" width="110" height="40" uuid="66d2a81e-5c3e-4809-a28d-492d45f93d53">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="703c1560-6082-4d6d-a6fb-8a563f9f05d8"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="THSarabun" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[หมายเลขร้าน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="147" y="0" width="115" height="40" uuid="b74c2bbb-1f77-4e17-b6cf-c54a545df880">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="98781054-23b0-4d7b-bac8-77cac8e51bcc"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="THSarabun" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[รายการสินค้า]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="288" y="0" width="102" height="40" uuid="5946b187-740c-4b44-a94e-d860a2fa0d08">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6007e4c3-771c-4a00-a28c-61580d3792d8"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="THSarabun" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[เวลาทำการสั่งซื้อ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="419" y="0" width="116" height="40" uuid="5f675b38-20dc-43ee-94c6-2c35bcc85140">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1fb1dfe4-5deb-4971-ace2-9ec60f86bcaf"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="THSarabun" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[หมายเลขออเดอร์]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="43" splitType="Stretch">
+			<textField>
+				<reportElement x="20" y="6" width="110" height="32" uuid="e97b156a-6bfd-4276-ad87-0662a29ec2b4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="703c1560-6082-4d6d-a6fb-8a563f9f05d8"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="THSarabun" size="16" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{shop_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="289" y="10" width="101" height="30" uuid="13af3e42-78bb-434d-8e89-616e23802778">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6007e4c3-771c-4a00-a28c-61580d3792d8"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="THSarabun" size="16" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{order_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="416" y="5" width="122" height="30" uuid="18f4eba6-9fde-4d91-b4d8-86eb01e36d30">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1fb1dfe4-5deb-4971-ace2-9ec60f86bcaf"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="THSarabun" size="16" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{order_number}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="4" width="117" height="35" uuid="f477a242-dfe0-453f-b971-cdb1284fddde">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="98781054-23b0-4d7b-bac8-77cac8e51bcc"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="THSarabun" size="16" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pd_id}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -15,4 +15,8 @@ public interface ProductService {
 	public List<ProductDto> selectAllProduct() throws Exception;
 	
 	public ProductDto getProductByPD_id (Integer pd_id ) throws Exception;
+	
+	public List<ProductDto> getProductByShop_id (Integer shop_id) throws Exception;
+	
+//	public ProductDto getProductByShop_id (Integer shop_id) throws Exception;
 }
