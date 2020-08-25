@@ -17,6 +17,9 @@ public class ProductEntity {
 
 	@Column(name = "shop_id")
 	private Integer shop_id;
+	
+	@Column(name = "type_id")
+	private Integer type_id;
 
 	@Column(name = "pd_name")
 	private String 	pd_name;
@@ -47,6 +50,14 @@ public class ProductEntity {
 
 	public void setShop_id(Integer shop_id) {
 		this.shop_id = shop_id;
+	}
+
+	public Integer getType_id() {
+		return type_id;
+	}
+
+	public void setType_id(Integer type_id) {
+		this.type_id = type_id;
 	}
 
 	public String getPd_name() {

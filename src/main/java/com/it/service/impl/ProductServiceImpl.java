@@ -72,6 +72,7 @@ public class ProductServiceImpl implements ProductService {
 		if (entity != null) {
 			dto.setPd_id(entity.getPd_id());
 			dto.setShop_id(entity.getShop_id());
+			dto.setType_id(entity.getType_id());
 			dto.setPd_name(entity.getPd_name());
 			dto.setPd_img(entity.getPd_img());
 			dto.setPd_price(entity.getPd_price());
@@ -87,6 +88,7 @@ public class ProductServiceImpl implements ProductService {
 		if (dto != null) {
 			entity.setPd_id(dto.getPd_id());
 			entity.setShop_id(dto.getShop_id());
+			entity.setType_id(dto.getType_id());
 			entity.setPd_name(dto.getPd_name());
 			entity.setPd_img(dto.getPd_img());
 			entity.setPd_price(dto.getPd_price());

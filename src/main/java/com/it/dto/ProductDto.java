@@ -6,6 +6,7 @@ public class ProductDto {
 
 	private int pd_id;
 	private int shop_id;
+	private int type_id;
 	private String pd_name;
 	private String pd_img;
 	private BigDecimal pd_price;
@@ -22,6 +23,12 @@ public class ProductDto {
 	}
 	public void setShop_id(int shop_id) {
 		this.shop_id = shop_id;
+	}
+	public int getType_id() {
+		return type_id;
+	}
+	public void setType_id(int type_id) {
+		this.type_id = type_id;
 	}
 	public String getPd_name() {
 		return pd_name;
