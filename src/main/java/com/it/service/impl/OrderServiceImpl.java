@@ -68,6 +68,7 @@ public class OrderServiceImpl implements OrderService {
 			dto.setId(entity.getId());
 			dto.setShop_id(entity.getShop_id());
 			dto.setPd_id(entity.getPd_id());
+			dto.setOrder_ref(entity.getOrder_ref());
 			dto.setOrder_name(entity.getOrder_name());
 			dto.setOrder_date(entity.getOrder_date());
 			dto.setOrder_number(entity.getOrder_number());
@@ -83,6 +84,7 @@ public class OrderServiceImpl implements OrderService {
 			entity.setId(dto.getId());
 			entity.setShop_id(dto.getShop_id());
 			entity.setPd_id(dto.getPd_id());
+			entity.setOrder_ref(dto.getOrder_ref());
 			entity.setOrder_name(dto.getOrder_name());
 			entity.setOrder_date(dto.getOrder_date());
 			entity.setOrder_number(dto.getOrder_number());

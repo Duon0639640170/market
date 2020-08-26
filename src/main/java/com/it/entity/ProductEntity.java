@@ -1,15 +1,23 @@
 package com.it.entity;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "tb_product")
-public class ProductEntity {
+public class ProductEntity implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 
 	@Id
 	@Column(name = "pd_id")
@@ -35,6 +43,18 @@ public class ProductEntity {
 	
 	@Column(name = "pd_number")
 	private Integer pd_number;
+
+	@ManyToOne (cascade=CascadeType.REFRESH)
+    @JoinColumn(name = "type_id", referencedColumnName = "type_id", insertable=false, updatable=false)
+	private TypeEntity typeEntity;	
+
+	public TypeEntity getTypeEntity() {
+		return typeEntity;
+	}
+
+	public void setTypeEntity(TypeEntity typeEntity) {
+		this.typeEntity = typeEntity;
+	}
 
 	public Integer getPd_id() {
 		return pd_id;

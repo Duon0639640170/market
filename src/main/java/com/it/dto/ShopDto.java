@@ -10,6 +10,25 @@ public class ShopDto {
 	private String shop_tel;
 	private String bank_account_no;
 	private String bank_name;
+	
+	public ShopDto() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public ShopDto(int shop_id, int id, String  shop_name, String  shop_img, String shop_address, String shop_tel,
+			String bank_account_no, String bank_name) {
+		super();
+		this.shop_id = shop_id;
+		this.id = id;
+		this.shop_name = shop_name;
+		this.shop_img = shop_img;
+		this.shop_address = shop_address;
+		this.shop_tel = shop_tel;
+		this.bank_account_no = bank_account_no;
+		this.bank_name = bank_name;
+	}
+	
 	public int getShop_id() {
 		return shop_id;
 	}

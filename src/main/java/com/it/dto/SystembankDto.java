@@ -6,6 +6,19 @@ public class SystembankDto {
 	private String bank_account;
 	private String bank_name;
 	private String account_name;
+	
+	public SystembankDto() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public SystembankDto(int id, String  bank_account, String  bank_name, String account_name) {
+		super();
+		this.id = id;
+		this.bank_account = bank_account;
+		this.bank_name = bank_name;
+		this.account_name = account_name;
+	}
 
 	public int getId() {
 		return id;

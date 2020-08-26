@@ -1,5 +1,7 @@
 package com.it.entity;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -7,8 +9,13 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "tb_report")
-public class ReportEntity {
+public class ReportEntity implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
 		@Id
 		@Column(name = "rp_id")
 		private Integer rp_id;

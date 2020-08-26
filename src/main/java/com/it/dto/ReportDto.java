@@ -11,6 +11,21 @@ public class ReportDto {
 	private String rp_trackingnumber;
 	private String rp_date;
 	
+	public ReportDto() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public ReportDto(int rp_id, int user_id, int  shop_id, String  rp_product, String rp_trackingnumber, String rp_date) {
+		super();
+		this.rp_id = rp_id;
+		this.user_id = user_id;
+		this.shop_id = shop_id;
+		this.rp_product = rp_product;
+		this.rp_trackingnumber = rp_trackingnumber;
+		this.rp_date = rp_date;
+	}
+	
 	public int getRp_id() {
 		return rp_id;
 	}

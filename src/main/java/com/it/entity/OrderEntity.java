@@ -1,5 +1,7 @@
 package com.it.entity;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,8 +11,13 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "tb_order")
-public class OrderEntity {
+public class OrderEntity implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "order_id")
@@ -24,6 +31,9 @@ public class OrderEntity {
 
 	@Column(name = "pd_id")
 	private Integer pd_id;
+	
+	@Column(name = "order_ref")
+	private String order_ref;
 	
 	@Column(name = "order_name")
 	private String order_name;
@@ -64,6 +74,14 @@ public class OrderEntity {
 
 	public void setPd_id(Integer pd_id) {
 		this.pd_id = pd_id;
+	}
+	
+	public String getOrder_ref() {
+		return order_ref;
+	}
+
+	public void setOrder_ref(String order_ref) {
+		this.order_ref = order_ref;
 	}
 
 	public String getOrder_name() {

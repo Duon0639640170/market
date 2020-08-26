@@ -1,13 +1,25 @@
 package com.it.entity;
 
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "tb_type")
-public class TypeEntity {
+public class TypeEntity implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	
 	@Id
 	@Column(name = "type_id")
@@ -54,5 +66,4 @@ public class TypeEntity {
 		this.type_status = type_status;
 	}
 
-	
 }

@@ -4,14 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.apache.commons.collections.CollectionUtils;
+import org.apache.commons.lang.ObjectUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.it.dao.ProductRepository;
 import com.it.dto.ProductDto;
 import com.it.dto.ShopDto;
+import com.it.dto.TypeDto;
 import com.it.entity.ProductEntity;
 import com.it.entity.ShopEntity;
+import com.it.entity.TypeEntity;
 import com.it.service.ProductService;
 
 @Service
@@ -78,9 +82,19 @@ public class ProductServiceImpl implements ProductService {
 			dto.setPd_price(entity.getPd_price());
 			dto.setPd_details(entity.getPd_details());
 			dto.setPd_number(entity.getPd_number());
-					
+			if (null != entity.getTypeEntity()) {		
+				dto.setProductType(convertTypeEntityToDto( entity.getTypeEntity()));
+			}
 		}
 		return dto;		
+	}
+	
+	private TypeDto convertTypeEntityToDto(TypeEntity entity) {
+		TypeDto productType = null;
+		if (null != entity) {
+			productType = new TypeDto(entity.getType_id(), entity.getType_name(), entity.getType_detail(), entity.getType_status());
+		}		
+		return productType;
 	}
 	
 	private ProductEntity convertDtoToEntit(ProductDto dto) {

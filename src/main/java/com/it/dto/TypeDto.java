@@ -5,6 +5,19 @@ public class TypeDto {
 	private String type_name;
 	private String type_detail;
 	private String type_status;
+	
+	
+	public TypeDto() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public TypeDto(int type_id, String type_name, String type_detail, String type_status) {
+		super();
+		this.type_id = type_id;
+		this.type_name = type_name;
+		this.type_detail = type_detail;
+		this.type_status = type_status;
+	}
 	public int getType_id() {
 		return type_id;
 	}
