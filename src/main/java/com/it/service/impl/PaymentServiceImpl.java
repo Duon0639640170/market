@@ -86,7 +86,7 @@ public class PaymentServiceImpl implements PaymentService {
 	}
 
 	private List<OrderDto> convertOrderEntitiesToOrders(List<OrderEntity> orderEntities){
-		List<OrderDto> response = new ArrayList<>();
+		List<OrderDto> response = new ArrayList<>(); 
 		if (CollectionUtils.isNotEmpty(orderEntities)) {
 			for (OrderEntity entity: orderEntities) {
 				response.add(new OrderDto(entity.getOrder_id(),
