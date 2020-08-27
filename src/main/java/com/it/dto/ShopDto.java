@@ -1,7 +1,11 @@
 package com.it.dto;
 
-public class ShopDto {
+import java.io.Serializable;
 
+public class ShopDto implements Serializable{
+
+	private static final long serialVersionUID = 1L;
+	
 	private int shop_id;
 	private int id;
 	private String shop_name;

@@ -1,9 +1,12 @@
 package com.it.dto;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
-public class ProductDto {
+public class ProductDto implements Serializable{
 
+	private static final long serialVersionUID = 1L;
+	
 	private int pd_id;
 	private int shop_id;
 	private int type_id;

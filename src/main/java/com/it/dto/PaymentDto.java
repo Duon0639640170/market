@@ -1,10 +1,13 @@
 package com.it.dto;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.List;
 
-public class PaymentDto {
+public class PaymentDto implements Serializable{
 
+	private static final long serialVersionUID = 1L;
+	
 	private int pm_id;
 	private int id;
 	private String dr_adress;

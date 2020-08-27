@@ -1,6 +1,11 @@
 package com.it.dto;
 
-public class TypeDto {
+import java.io.Serializable;
+
+public class TypeDto implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
+	
 	private int type_id;
 	private String type_name;
 	private String type_detail;
@@ -18,6 +23,9 @@ public class TypeDto {
 		this.type_detail = type_detail;
 		this.type_status = type_status;
 	}
+	private TypeDto productType;
+
+
 	public int getType_id() {
 		return type_id;
 	}
@@ -42,7 +50,12 @@ public class TypeDto {
 	public void setType_status(String type_status) {
 		this.type_status = type_status;
 	}
-
+	public TypeDto getProductType() {
+		return productType;
+	}
+	public void setProductType(TypeDto productType) {
+		this.productType = productType;
+	}
 	
 	
 }

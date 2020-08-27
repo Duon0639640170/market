@@ -1,7 +1,11 @@
 package com.it.dto;
 
-public class SystembankDto {
+import java.io.Serializable;
 
+public class SystembankDto implements Serializable{
+
+	private static final long serialVersionUID = 1L;
+	
 	private int id;
 	private String bank_account;
 	private String bank_name;

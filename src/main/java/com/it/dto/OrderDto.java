@@ -1,7 +1,11 @@
 package com.it.dto;
 
-public class OrderDto {
+import java.io.Serializable;
 
+public class OrderDto implements Serializable{
+
+	private static final long serialVersionUID = 1L;
+	
 	private int order_id;
 	private int id;
 	private int shop_id;
@@ -28,6 +32,7 @@ public class OrderDto {
 		this.order_date = order_date;
 		this.order_number = order_number;
 	}
+	private OrderDto productType;
 
 	public int getOrder_id() {
 		return order_id;
@@ -93,4 +98,12 @@ public class OrderDto {
 		this.order_number = order_number;
 	}
 
+	public OrderDto getProductType() {
+		return productType;
+	}
+
+	public void setProductType(OrderDto productType) {
+		this.productType = productType;
+	}
+	
 }

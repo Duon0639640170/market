@@ -1,8 +1,10 @@
 package com.it.dto;
 
-public class ReportDto {
+import java.io.Serializable;
 
-	
+public class ReportDto implements Serializable{
+
+	private static final long serialVersionUID = 1L;
 	private int rp_id;
 	private int user_id;
 	private int shop_id;
