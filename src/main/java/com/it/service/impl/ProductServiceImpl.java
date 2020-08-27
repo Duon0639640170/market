@@ -143,4 +143,18 @@ public class ProductServiceImpl implements ProductService {
 		return product;
 	}
 
+	@Override
+	public List<ProductDto> getProductByTypeId(Integer type_id) throws Exception {
+		System.out.println("getProductByTypeId :: type_id => " + type_id);
+		List<ProductDto> product = new ArrayList<>();
+		if (type_id != null) {
+			List<ProductEntity> entities = productRepository.findProductByTypeId(type_id);
+			if (entities != null) {
+				product = entities.stream().map(entity -> convertEntityToDto(entity)).collect(Collectors.toList());
+			}
+		} else {
+			throw new NullPointerException("getProductByShop_id :: shop_id is null! ");
+		}
+		return product;
+	}
 }

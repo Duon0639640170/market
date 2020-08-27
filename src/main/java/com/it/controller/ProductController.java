@@ -67,5 +67,9 @@ public class ProductController {
 		return new ResponseEntity<List<ProductDto>>(response, HttpStatus.OK);
 	}
 	
-	
+	@GetMapping("/product-by-type-id/{type_id}")
+	public ResponseEntity<List<ProductDto>> getProductByTypeId(@PathVariable Integer type_id) throws Exception {
+		List<ProductDto> shop = productService.getProductByTypeId(type_id);
+		return new ResponseEntity<List<ProductDto>>(shop, HttpStatus.OK);
+	}
 }
