@@ -71,6 +71,7 @@ public class PaymentServiceImpl implements PaymentService {
 			dto.setPm_id(entity.getPm_id());
 			dto.setId(entity.getId());
 			dto.setDr_adress(entity.getDr_adress());
+			dto.setDr_status(entity.getDr_status());
 			dto.setPm_totalpric(entity.getPm_totalpric());
 			dto.setPm_img(entity.getPm_img());
 			dto.setPm_date(entity.getPm_date());
