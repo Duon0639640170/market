@@ -12,6 +12,7 @@ public class PaymentDto implements Serializable{
 	private int id;
 	private String dr_adress;
 	private String dr_status;
+	private String order_ref;
 	private BigDecimal pm_totalpric;
 	private String pm_img;
 	private String pm_date;
@@ -56,6 +57,14 @@ public class PaymentDto implements Serializable{
 
 	public void setDr_status(String dr_status) {
 		this.dr_status = dr_status;
+	}
+
+	public String getOrder_ref() {
+		return order_ref;
+	}
+
+	public void setOrder_ref(String order_ref) {
+		this.order_ref = order_ref;
 	}
 
 	public void setDr_adress(String dr_adress) {

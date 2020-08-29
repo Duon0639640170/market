@@ -72,6 +72,7 @@ public class PaymentServiceImpl implements PaymentService {
 			dto.setId(entity.getId());
 			dto.setDr_adress(entity.getDr_adress());
 			dto.setDr_status(entity.getDr_status());
+			dto.setOrder_ref(entity.getOrder_ref());
 			dto.setPm_totalpric(entity.getPm_totalpric());
 			dto.setPm_img(entity.getPm_img());
 			dto.setPm_date(entity.getPm_date());
@@ -110,6 +111,7 @@ public class PaymentServiceImpl implements PaymentService {
 			entity.setId(dto.getId());
 			entity.setDr_adress(dto.getDr_adress());
 			entity.setDr_status(dto.getDr_status());
+			entity.setOrder_ref(dto.getOrder_ref());
 			entity.setPm_totalpric(dto.getPm_totalpric());
 			entity.setPm_img(dto.getPm_img());
 			entity.setPm_date(dto.getPm_date());
