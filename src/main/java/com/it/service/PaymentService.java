@@ -1,8 +1,10 @@
 package com.it.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.it.dto.DeliverryDto;
+import com.it.dto.OrderDto;
 import com.it.dto.PaymentDto;
 
 
@@ -20,6 +22,7 @@ public interface PaymentService {
 	
 	public PaymentDto getPaymentByPM_id (Integer pm_id) throws Exception;
 
-
+	public List<PaymentDto> selectPaymentByOrderRef(String order_ref) throws Exception;
+	
 	
 }

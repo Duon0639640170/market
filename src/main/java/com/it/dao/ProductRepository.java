@@ -18,4 +18,6 @@ public interface ProductRepository extends CrudRepository<ProductEntity, Integer
 
 	@Query("SELECT product FROM ProductEntity product WHERE product.type_id = :type_id ")
 	List<ProductEntity> findProductByTypeId(@Param("type_id") Integer type_id);
+	
+
 }

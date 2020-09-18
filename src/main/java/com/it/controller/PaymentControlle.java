@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.it.dto.OrderDto;
 import com.it.dto.PaymentDto;
 import com.it.service.PaymentService;
 
@@ -56,4 +58,11 @@ public class PaymentControlle {
 		List<PaymentDto> response = paymentservice.selectPaymentListById(id);
 		return new ResponseEntity<List<PaymentDto>>(response, HttpStatus.OK);
 	}
+	
+	@GetMapping("/payment-by-order-ref/{order_ref}")
+	public ResponseEntity<List<PaymentDto>> getPaymentByOrderRef(@PathVariable String order_ref) throws Exception {
+		List<PaymentDto> order = paymentservice.selectPaymentByOrderRef(order_ref);
+		return new ResponseEntity<List<PaymentDto>>(order, HttpStatus.OK);
+	}
+	
 }

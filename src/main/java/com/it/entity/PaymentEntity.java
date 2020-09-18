@@ -63,7 +63,7 @@ public class PaymentEntity implements Serializable {
 		return order_ref;
 	}
 
-	public void setOrder_ref(String order_ref) {
+	public void setOrderRef(String order_ref) {
 		this.order_ref = order_ref;
 	}
 

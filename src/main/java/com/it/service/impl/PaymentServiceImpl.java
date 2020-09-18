@@ -87,17 +87,12 @@ public class PaymentServiceImpl implements PaymentService {
 		return dto;
 	}
 
-	private List<OrderDto> convertOrderEntitiesToOrders(List<OrderEntity> orderEntities){
-		List<OrderDto> response = new ArrayList<>(); 
+	private List<OrderDto> convertOrderEntitiesToOrders(List<OrderEntity> orderEntities) {
+		List<OrderDto> response = new ArrayList<>();
 		if (CollectionUtils.isNotEmpty(orderEntities)) {
-			for (OrderEntity entity: orderEntities) {
-				response.add(new OrderDto(entity.getOrder_id(),
-						entity.getId(),
-						entity.getShop_id(),
-						entity.getPd_id(),
-						entity.getOrder_ref(),
-						entity.getOrder_name(),
-						entity.getOrder_date(),
+			for (OrderEntity entity : orderEntities) {
+				response.add(new OrderDto(entity.getOrder_id(), entity.getId(), entity.getShop_id(), entity.getPd_id(),
+						entity.getOrder_ref(), entity.getOrder_name(), entity.getOrder_date(),
 						entity.getOrder_number()));
 			}
 		}
@@ -111,7 +106,7 @@ public class PaymentServiceImpl implements PaymentService {
 			entity.setId(dto.getId());
 			entity.setDr_adress(dto.getDr_adress());
 			entity.setDr_status(dto.getDr_status());
-			entity.setOrder_ref(dto.getOrder_ref());
+			entity.setOrderRef(dto.getOrder_ref());
 			entity.setPm_totalpric(dto.getPm_totalpric());
 			entity.setPm_img(dto.getPm_img());
 			entity.setPm_date(dto.getPm_date());
@@ -147,4 +142,13 @@ public class PaymentServiceImpl implements PaymentService {
 		return payments;
 	}
 
+	@Override
+	public List<PaymentDto> selectPaymentByOrderRef(String order_ref) throws Exception {
+		List<PaymentDto> paymentss = new ArrayList<>();
+		List<PaymentEntity> entities = paymentRepository.findPaymentByOrderRef(order_ref);
+		if (entities != null) {
+			paymentss = entities.stream().map(entity -> convertEntityToDto(entity)).collect(Collectors.toList());
+		}
+		return paymentss;
+	}
 }

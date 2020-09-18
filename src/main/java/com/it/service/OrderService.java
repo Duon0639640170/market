@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.it.dto.OrderDto;
+import com.it.dto.ProductDto;
 
 
 public interface OrderService {
@@ -22,6 +23,8 @@ public interface OrderService {
 	public ArrayList<OrderDto> getOrdersById (Integer id) throws Exception;
 	
 	public ArrayList<OrderDto> getOrdersByShop_id (Integer shop_id) throws Exception;
+	
+	
 
 	
 }

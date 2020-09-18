@@ -32,8 +32,18 @@ public class OrderDto implements Serializable{
 		this.order_date = order_date;
 		this.order_number = order_number;
 	}
-	private OrderDto productType;
+	private ProductDto productType;
 
+
+	public ProductDto getProductType() {
+		return productType;
+	}
+
+	public void setProductType(ProductDto productType) {
+		this.productType = productType;
+	}
+	
+	
 	public int getOrder_id() {
 		return order_id;
 	}
@@ -98,12 +108,5 @@ public class OrderDto implements Serializable{
 		this.order_number = order_number;
 	}
 
-	public OrderDto getProductType() {
-		return productType;
-	}
-
-	public void setProductType(OrderDto productType) {
-		this.productType = productType;
-	}
 	
 }

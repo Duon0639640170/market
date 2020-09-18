@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import com.it.dto.OrderDto;
+import com.it.dto.ProductDto;
 import com.it.service.OrderService;
 
 @RestController
@@ -74,4 +75,7 @@ public class OrderController {
 		ArrayList<OrderDto> orders = orderservice.getOrdersByShop_id(shop_id);
 		return new ResponseEntity<ArrayList<OrderDto>>(orders, HttpStatus.OK);
 	}
+	
+	
+	
 }

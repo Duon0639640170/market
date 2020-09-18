@@ -7,7 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.it.dao.OrderRepository;
 import com.it.dto.OrderDto;
+import com.it.dto.ProductDto;
+import com.it.dto.TypeDto;
 import com.it.entity.OrderEntity;
+import com.it.entity.ProductEntity;
+import com.it.entity.TypeEntity;
 import com.it.service.OrderService;
 
 @Service
@@ -72,9 +76,21 @@ public class OrderServiceImpl implements OrderService {
 			dto.setOrder_name(entity.getOrder_name());
 			dto.setOrder_date(entity.getOrder_date());
 			dto.setOrder_number(entity.getOrder_number());
+			if (null != entity.getProductEntity()) {		
+				dto.setProductType(convertProductEntityToDto(entity.getProductEntity()));
+			}
 
 		}
 		return dto;
+	}
+	
+	private ProductDto convertProductEntityToDto(ProductEntity entity) {
+		ProductDto orderproduct = null;
+		if (null != entity) {
+			orderproduct = new ProductDto(entity.getPd_id(), entity.getShop_id(), entity.getType_id(), entity.getPd_name(),entity.getPd_img(),
+					entity.getPd_price(),entity.getPd_details(),entity.getPd_number());
+		}		
+		return orderproduct;
 	}
 
 	private OrderEntity convertDtoToEntit(OrderDto dto) {
@@ -137,4 +153,6 @@ public class OrderServiceImpl implements OrderService {
 		}
 		return orders;
 	}
+
+	
 }

@@ -2,11 +2,14 @@ package com.it.entity;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -43,6 +46,18 @@ public class OrderEntity implements Serializable {
 
 	@Column(name = "order_number")
 	private Integer order_number;
+	
+	@ManyToOne (cascade=CascadeType.REFRESH)
+    @JoinColumn(name = "pd_id", referencedColumnName = "pd_id", insertable=false, updatable=false)
+	private ProductEntity productEntity;	
+
+	public ProductEntity getProductEntity() {
+		return productEntity;
+	}
+
+	public void setProductEntity(ProductEntity productEntity) {
+		this.productEntity = productEntity;
+	}
 
 	public Integer getOrder_id() {
 		return order_id;
